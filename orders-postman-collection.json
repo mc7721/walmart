@@ -1,0 +1,404 @@
+{
+    "id": "ca7ecd56bb02a84e94edc86b5ae838c7",
+    "name": "Orders",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "719fb2f1d6b7b68cb622ff51948da5fa",
+            "name": "Get all orders",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders",
+            "description": "You can display a list of all orders with the query parameter filter criteria.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sku",
+                    "description": "Retrieves all orders with the specified SKU.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "customerOrderId",
+                    "description": "Retrives the details of the specified customerOrderId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "purchaseOrderId",
+                    "description": "The purchase order ID associated with the order to retrieve. One customer order can have multiple purchase orders associated with it.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "The list of orders corresponding to the requested status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createdStartDate",
+                    "description": "Limit orders to those created after this date or a timestamp.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createdEndDate",
+                    "description": "Limit orders to those created before this date or timestamp.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromExpectedShipDate",
+                    "description": "Limit orders to those that have order lines with an expected ship date after this date.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "toExpectedShipDate",
+                    "description": "Limit orders to those that have order lines with an expected ship date before this date. ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The number of orders to be returned. Do not set this parameter to over 200 orders.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "d1a9d66b7dd76ef56b02ccf6e7305ed4",
+            "name": "Get all released orders",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/released",
+            "description": "You can display all released orders that have been created and are ready for fulfilment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createdStartDate",
+                    "description": "Limit orders to those created after this date or a timestamp.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "The number of orders to be returned. Do not set this parameter to over 200 orders.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "4d59ee2a4774b2c9b9f19df51972fb07",
+            "name": "Get released orders for next page",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/released{nextCursor}",
+            "description": "You can display all released orders that have been created and are ready for fulfilment with nextCursor path parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "nextCursor",
+                    "description": "Used for pagination when there are more than 200 orders to retrieve. The nextCursor value of the returned response includes a link to another GET call to retrieve the next page. Copy the link and paste it in the next call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "287474141c15f94b2668a308bc97ca8e",
+            "name": "Get an order",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}",
+            "description": "You can display details of a specific order based on the purchaseOrderId.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "purchaseOrderId",
+                    "description": "Purchase Order ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "add653802fc703197aa9fc9a8fc32aef",
+            "name": "Acknowledge orders",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/acknowledge",
+            "description": "You can acknowledge an entire order, including all of its order lines. Walmart business rules require to acknowledge orders within\u00a0four\u00a0hour of receipt of the order, except in extenuating circumstances.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "purchaseOrderId",
+                    "description": "Purchase Order ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "f1f2a4d3cc4748434faf1d36a4abb8fe",
+            "name": "Cancel order lines",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/cancel",
+            "description": "You can cancel one or more order lines. You must include a purchaseOrderLineNumber when cancelling an order. After cancelling your order, update the inventory for the cancelled order and send it in the next inventory feed.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "purchaseOrderId",
+                    "description": "Purchase Order ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "381b44f4cc1e6370eca788b81f48b89b",
+            "name": "Refund order lines",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/refund",
+            "description": "You can refund one or more order lines that have been shipped. The response to a successful call contains the order with the refunded line item.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "purchaseOrderId",
+                    "description": "Purchase Order ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "20b3e6955bd0f4d2e00cf34423e0dea8",
+            "name": "Shipping updates",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/shipping",
+            "description": "You can change the status of order lines to \"Shipped\" and trigger the charge to a customer. You must acknowledge your orders before sending a shipping update to avoid underselling. An order line, once marked as shipped, cannot be updated.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "purchaseOrderId",
+                    "description": "Purchase Order ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        },
+        {
+            "id": "2422412b099e136451b00e6d5d31ef30",
+            "name": "Get orders for next page",
+            "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders{nextCursor}",
+            "description": "You can display a list of all orders with nextCursor path parameter pagination criteria.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "nextCursor",
+                    "description": "Used for pagination when there are more than 200 orders to retrieve. The nextCursor value of the returned response includes a link to another GET call to retrieve the next page. Copy the link and paste it in the next call.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "rawModeData": ""
+        }
+    ]
+}
