@@ -1,0 +1,109 @@
+{
+    "name": "Walmart",
+    "description": "Shop Walmart.com for Every Day Low Prices. Free Shipping on Orders $35+ or Pickup In-Store and get a Pickup Discount. Open a Walmart Credit Card to Save Even More!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11447-walmart.jpg",
+    "tags": [
+        "commerce",
+        "have api",
+        "have swagger"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/walmart\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Walmart",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11447-walmart.jpg",
+            "humanURL": "https:\/\/developer.walmartlabs.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/walmart.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/walmart-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11447-walmart.jpg",
+            "humanURL": "https:\/\/developer.walmartlabs.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/inventory.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/inventory-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Orders",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/11447-walmart.jpg",
+            "humanURL": "https:\/\/developer.walmartlabs.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/orders.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/orders-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/walmart"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/developer.walmartlabs.com\/"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/11447-2019-09-03-16-24-38.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/11447-2019-09-03-19-38-43.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/11447-2019-09-03-19-38-50.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/11447-2019-09-03-13-40-39.json"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/Walmart"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/developer.walmartlabs.com"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/walmart.com\/"
+        }
+    ]
+}
