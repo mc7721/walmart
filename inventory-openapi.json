@@ -1,0 +1,117 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "3.0.1",
+        "title": "Inventory",
+        "description": "Please make sure you use the correct version of the APIs for your use case. To find out the appropriate version, go to the API Docs  drop down on the menu.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest"
+    ],
+    "paths": {
+        "\/v2\/feeds": {
+            "post": {
+                "summary": "Upload an inventory feed",
+                "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "feedType",
+                        "in": "query",
+                        "description": "Feed Type"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "Feed File to upload"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v2\/inventory": {
+            "get": {
+                "summary": "Get inventory for an item",
+                "description": "This endpoint retrieves inventory for a given item.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sku",
+                        "in": "query",
+                        "description": "The SKU (seller-provided product identifier) of the item whose inventory we are retrieving"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/feeds": {
+            "post": {
+                "summary": "Upload an inventory feed",
+                "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "feedType",
+                        "in": "query",
+                        "description": "Feed Type"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "Feed File to upload"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/inventory": {
+            "get": {
+                "summary": "Get inventory for an item",
+                "description": "This endpoint retrieves inventory for a given item.",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sku",
+                        "in": "query",
+                        "description": "The SKU (seller-provided product identifier) of the item whose inventory we are retrieving"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
