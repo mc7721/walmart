@@ -1,0 +1,165 @@
+{
+    "id": "062a5d5ce312f866bfda58928402c4bd",
+    "name": "Inventory",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "40303b90d42cc6a84fd7d7c1efae055f",
+            "name": "Upload an inventory feed",
+            "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v2\/feeds",
+            "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "feedType",
+                    "description": "Feed Type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "Feed File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "rawModeData": ""
+        },
+        {
+            "id": "4168afbb6071a3c2fcf7230b61f83616",
+            "name": "Get inventory for an item",
+            "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v2\/inventory",
+            "description": "This endpoint retrieves inventory for a given item.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sku",
+                    "description": "The SKU (seller-provided product identifier) of the item whose inventory we are retrieving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "rawModeData": ""
+        },
+        {
+            "id": "a53048ad401f05be7207b3c26f5f5534",
+            "name": "Upload an inventory feed",
+            "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v3\/feeds",
+            "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "feedType",
+                    "description": "Feed Type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "Feed File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "rawModeData": ""
+        },
+        {
+            "id": "f7ba1c3243909a21837988cdbad32ff6",
+            "name": "Get inventory for an item",
+            "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v3\/inventory",
+            "description": "This endpoint retrieves inventory for a given item.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sku",
+                    "description": "The SKU (seller-provided product identifier) of the item whose inventory we are retrieving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipNode",
+                    "description": "Ship Node",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "rawModeData": ""
+        }
+    ]
+}
