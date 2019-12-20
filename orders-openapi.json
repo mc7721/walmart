@@ -1,0 +1,277 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "3.0.1",
+        "title": "Orders",
+        "description": "Please make sure you use the correct version of the APIs for your use case. To find out the appropriate version, go to the API Docs  drop down on the menu.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest"
+    ],
+    "paths": {
+        "\/v3\/orders": {
+            "get": {
+                "summary": "Get all orders",
+                "description": "You can display a list of all orders with the query parameter filter criteria.",
+                "operationId": "GetAllOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    },
+                    {
+                        "name": "sku",
+                        "in": "query",
+                        "description": "Retrieves all orders with the specified SKU."
+                    },
+                    {
+                        "name": "customerOrderId",
+                        "in": "query",
+                        "description": "Retrives the details of the specified customerOrderId."
+                    },
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "query",
+                        "description": "The purchase order ID associated with the order to retrieve. One customer order can have multiple purchase orders associated with it."
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "The list of orders corresponding to the requested status."
+                    },
+                    {
+                        "name": "createdStartDate",
+                        "in": "query",
+                        "description": "Limit orders to those created after this date or a timestamp."
+                    },
+                    {
+                        "name": "createdEndDate",
+                        "in": "query",
+                        "description": "Limit orders to those created before this date or timestamp."
+                    },
+                    {
+                        "name": "fromExpectedShipDate",
+                        "in": "query",
+                        "description": "Limit orders to those that have order lines with an expected ship date after this date."
+                    },
+                    {
+                        "name": "toExpectedShipDate",
+                        "in": "query",
+                        "description": "Limit orders to those that have order lines with an expected ship date before this date. "
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The number of orders to be returned. Do not set this parameter to over 200 orders."
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/released": {
+            "get": {
+                "summary": "Get all released orders",
+                "description": "You can display all released orders that have been created and are ready for fulfilment.",
+                "operationId": "GetReleasedOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    },
+                    {
+                        "name": "createdStartDate",
+                        "in": "query",
+                        "description": "Limit orders to those created after this date or a timestamp."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The number of orders to be returned. Do not set this parameter to over 200 orders."
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/released{nextCursor}": {
+            "get": {
+                "summary": "Get released orders for next page",
+                "description": "You can display all released orders that have been created and are ready for fulfilment with nextCursor path parameter.",
+                "operationId": "GetNextCursorReleasedOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "nextCursor",
+                        "in": "path",
+                        "description": "Used for pagination when there are more than 200 orders to retrieve. The nextCursor value of the returned response includes a link to another GET call to retrieve the next page. Copy the link and paste it in the next call."
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/{purchaseOrderId}": {
+            "get": {
+                "summary": "Get an order",
+                "description": "You can display details of a specific order based on the purchaseOrderId.",
+                "operationId": "GetOrderByPurchaseOrderId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "path",
+                        "description": "Purchase Order ID"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/{purchaseOrderId}\/acknowledge": {
+            "post": {
+                "summary": "Acknowledge orders",
+                "description": "You can acknowledge an entire order, including all of its order lines. Walmart business rules require to acknowledge orders within\u00a0four\u00a0hour of receipt of the order, except in extenuating circumstances.",
+                "operationId": "AcknowledgeOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "path",
+                        "description": "Purchase Order ID"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/{purchaseOrderId}\/cancel": {
+            "post": {
+                "summary": "Cancel order lines",
+                "description": "You can cancel one or more order lines. You must include a purchaseOrderLineNumber when cancelling an order. After cancelling your order, update the inventory for the cancelled order and send it in the next inventory feed.",
+                "operationId": "CancelOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "path",
+                        "description": "Purchase Order ID"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/{purchaseOrderId}\/refund": {
+            "post": {
+                "summary": "Refund order lines",
+                "description": "You can refund one or more order lines that have been shipped. The response to a successful call contains the order with the refunded line item.",
+                "operationId": "RefundOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "path",
+                        "description": "Purchase Order ID"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders\/{purchaseOrderId}\/shipping": {
+            "post": {
+                "summary": "Shipping updates",
+                "description": "You can change the status of order lines to \"Shipped\" and trigger the charge to a customer. You must acknowledge your orders before sending a shipping update to avoid underselling. An order line, once marked as shipped, cannot be updated.",
+                "operationId": "ShippingOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "purchaseOrderId",
+                        "in": "path",
+                        "description": "Purchase Order ID"
+                    },
+                    {
+                        "name": "shipNode",
+                        "in": "query",
+                        "description": "Ship Node"
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "\/v3\/orders{nextCursor}": {
+            "get": {
+                "summary": "Get orders for next page",
+                "description": "You can display a list of all orders with nextCursor path parameter pagination criteria.",
+                "operationId": "GetAllOrdersNext",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "nextCursor",
+                        "in": "path",
+                        "description": "Used for pagination when there are more than 200 orders to retrieve. The nextCursor value of the returned response includes a link to another GET call to retrieve the next page. Copy the link and paste it in the next call."
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
