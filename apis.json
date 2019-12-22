@@ -7,8 +7,8 @@
         "have api",
         "have swagger"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/walmart\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -26,7 +26,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/walmart-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/walmart\/master\/walmart-openapi.json"
                 }
             ]
         },
@@ -44,7 +44,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/inventory-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/walmart\/master\/inventory-openapi.json"
                 }
             ]
         },
@@ -62,13 +62,17 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/orders-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/walmart\/master\/orders-openapi.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Crunchbase",
             "url": "https:\/\/crunchbase.com\/organization\/walmart"
