@@ -1,5 +1,5 @@
 {
-    "id": "062a5d5ce312f866bfda58928402c4bd",
+    "id": "7d9244dfdb75c567bd9dfe41edad3f61",
     "name": "Inventory",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "40303b90d42cc6a84fd7d7c1efae055f",
+            "id": "63b57f11f329846bf56514145e35793f",
             "name": "Upload an inventory feed",
             "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v2\/feeds",
             "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "collectionId": "7d9244dfdb75c567bd9dfe41edad3f61",
             "rawModeData": ""
         },
         {
-            "id": "4168afbb6071a3c2fcf7230b61f83616",
+            "id": "9fbbf00d57d5f3597ce2b246061d777d",
             "name": "Get inventory for an item",
             "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v2\/inventory",
             "description": "This endpoint retrieves inventory for a given item.",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "collectionId": "7d9244dfdb75c567bd9dfe41edad3f61",
             "rawModeData": ""
         },
         {
-            "id": "a53048ad401f05be7207b3c26f5f5534",
+            "id": "0e49334d39775c14db78e74286edd052",
             "name": "Upload an inventory feed",
             "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v3\/feeds",
             "description": "You can upload an inventory feed. If the feed successfully processed, it returns a feed ID. Use the returned feed ID to retrieve a feed status. You need Your Consumer ID and the private key to upload the feed",
@@ -120,11 +120,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "collectionId": "7d9244dfdb75c567bd9dfe41edad3f61",
             "rawModeData": ""
         },
         {
-            "id": "f7ba1c3243909a21837988cdbad32ff6",
+            "id": "1ffc6b4f9c9693a2224c8b12231cfae4",
             "name": "Get inventory for an item",
             "url": "http:\/\/developer.walmart.com\/inventoryProxy\/inventory-api-doc-app\/rest\/v3\/inventory",
             "description": "This endpoint retrieves inventory for a given item.",
@@ -158,7 +158,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "062a5d5ce312f866bfda58928402c4bd",
+            "collectionId": "7d9244dfdb75c567bd9dfe41edad3f61",
             "rawModeData": ""
         }
     ]
