@@ -1,5 +1,5 @@
 {
-    "id": "ca7ecd56bb02a84e94edc86b5ae838c7",
+    "id": "de68db0b65e705a395aac220e911ba6f",
     "name": "Orders",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "719fb2f1d6b7b68cb622ff51948da5fa",
+            "id": "83a065a858e11ded38731829e259c6ab",
             "name": "Get all orders",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders",
             "description": "You can display a list of all orders with the query parameter filter criteria.",
@@ -100,11 +100,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "d1a9d66b7dd76ef56b02ccf6e7305ed4",
+            "id": "842d076357dd0c154ce46d07e9e68de5",
             "name": "Get all released orders",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/released",
             "description": "You can display all released orders that have been created and are ready for fulfilment.",
@@ -145,11 +145,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "4d59ee2a4774b2c9b9f19df51972fb07",
+            "id": "bff9e8a859c6dd072c5882fbb0f429aa",
             "name": "Get released orders for next page",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/released{nextCursor}",
             "description": "You can display all released orders that have been created and are ready for fulfilment with nextCursor path parameter.",
@@ -176,11 +176,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "287474141c15f94b2668a308bc97ca8e",
+            "id": "b9c69535985f57ef36b142a4b8eb305b",
             "name": "Get an order",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}",
             "description": "You can display details of a specific order based on the purchaseOrderId.",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "add653802fc703197aa9fc9a8fc32aef",
+            "id": "5e349273dfb0d2350cbca0244d8cc4f9",
             "name": "Acknowledge orders",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/acknowledge",
             "description": "You can acknowledge an entire order, including all of its order lines. Walmart business rules require to acknowledge orders within\u00a0four\u00a0hour of receipt of the order, except in extenuating circumstances.",
@@ -252,11 +252,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "f1f2a4d3cc4748434faf1d36a4abb8fe",
+            "id": "319b112068fa4cae68ba4158a8cb18b5",
             "name": "Cancel order lines",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/cancel",
             "description": "You can cancel one or more order lines. You must include a purchaseOrderLineNumber when cancelling an order. After cancelling your order, update the inventory for the cancelled order and send it in the next inventory feed.",
@@ -290,11 +290,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "381b44f4cc1e6370eca788b81f48b89b",
+            "id": "880e87df6cddfe78e970d28412e7d39d",
             "name": "Refund order lines",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/refund",
             "description": "You can refund one or more order lines that have been shipped. The response to a successful call contains the order with the refunded line item.",
@@ -328,11 +328,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "20b3e6955bd0f4d2e00cf34423e0dea8",
+            "id": "c3bb51205e67ec4df853bb2fb138c4ba",
             "name": "Shipping updates",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders\/{purchaseOrderId}\/shipping",
             "description": "You can change the status of order lines to \"Shipped\" and trigger the charge to a customer. You must acknowledge your orders before sending a shipping update to avoid underselling. An order line, once marked as shipped, cannot be updated.",
@@ -366,11 +366,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         },
         {
-            "id": "2422412b099e136451b00e6d5d31ef30",
+            "id": "df0b74185ee2ee3a14b13ed39ada294c",
             "name": "Get orders for next page",
             "url": "http:\/\/developer.walmart.com\/orderProxy\/order-api-doc-app\/rest\/v3\/orders{nextCursor}",
             "description": "You can display a list of all orders with nextCursor path parameter pagination criteria.",
@@ -397,7 +397,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ca7ecd56bb02a84e94edc86b5ae838c7",
+            "collectionId": "de68db0b65e705a395aac220e911ba6f",
             "rawModeData": ""
         }
     ]
